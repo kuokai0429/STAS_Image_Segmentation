@@ -27,7 +27,7 @@ cd ..
 sudo apt-get update
 sudo apt-get install ffmpeg libsm6 libxext6  -y
 
-wget --load-cookies /tmp/cookies.txt "https://docs.google.com/uc?export=download&confirm=$(wget --quiet --save-cookies /tmp/cookies.txt --keep-session-cookies --no-check-certificate 'https://docs.google.com/uc?export=download&id=FILE_ID' -O- | sed -rn 's/.*confirm=([0-9A-Za-z_]+).*/\1\n/p')&id=FILE_ID" -O STAS_SEG_Data.zip && rm -rf /tmp/cookies.txt
+wget --load-cookies /tmp/cookies.txt "https://docs.google.com/uc?export=download&confirm=$(wget --quiet --save-cookies /tmp/cookies.txt --keep-session-cookies --no-check-certificate 'https://docs.google.com/uc?export=download&id=1bGVrEcgjQf_aSbh8qBVh3fGkSV1qRKmL' -O- | sed -rn 's/.*confirm=([0-9A-Za-z_]+).*/\1\n/p')&id=1bGVrEcgjQf_aSbh8qBVh3fGkSV1qRKmL" -O STAS_SEG_Data.zip && rm -rf /tmp/cookies.txt
 
 rm -r Configs Weights Datasets
 unzip STAS_SEG_Data.zip
