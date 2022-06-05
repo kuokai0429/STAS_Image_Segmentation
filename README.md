@@ -36,6 +36,8 @@ mv STAS_SEG_Data/Weights .
 mv STAS_SEG_Data/Datasets .
 rmdir STAS_SEG_Data
 
+sed -i "s/mmcv_maximum_version = '1.4.0'/mmcv_maximum_version = '1.5.2'/g" CBNetV2/mmdet/__init__.py
+
 python demo_coco.py --weight_file cascade_mask_rcnn_cbv2_swin_small_patch4_window7_mstrain_400-1400_adamw_3x_coco.pth
 python demo_stas_seg.py --weight_dir cascade_mask_rcnn_dual_swin_s_2_089_Weights --testdata_dirs Public_Image Private_Image/Image
 python train_stas_seg.py --weight_dir cascade_mask_rcnn_dual_swin_s_2_089_Weights --checkpoint_file cascade_mask_rcnn_cbv2_swin_small_patch4_window7_mstrain_400-1400_adamw_3x_coco.pth --config_files cascade_mask_rcnn_swin_small.py cascade_mask_rcnn_cbv2_swin_small.py
