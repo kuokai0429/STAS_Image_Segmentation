@@ -36,7 +36,7 @@ mv STAS_SEG_Data/Weights .
 mv STAS_SEG_Data/Datasets .
 rmdir STAS_SEG_Data
 
-python demo_coco.py --weight_file mask_rcnn_swin-s-p4-w7_fpn_fp16_ms-crop-3x_coco.pth
-python demo_stas_obj.py --weight_dir htc_swin_s_7_088_Weights --testdata_dirs Public_Image Private_Image/Image
-python train_stas_obj.py --weight_dir htc_swin_s_7_088_Weights --config_file htc_without_semantic_swin_fpn.py
+python demo_coco.py --weight_file cascade_mask_rcnn_cbv2_swin_small_patch4_window7_mstrain_400-1400_adamw_3x_coco.pth
+python demo_stas_seg.py --weight_dir cascade_mask_rcnn_dual_swin_s_2_089_Weights --testdata_dirs Public_Image Private_Image/Image
+python train_stas_seg.py --weight_dir cascade_mask_rcnn_dual_swin_s_2_089_Weights --checkpoint_file cascade_mask_rcnn_cbv2_swin_small_patch4_window7_mstrain_400-1400_adamw_3x_coco.pth --config_files cascade_mask_rcnn_swin_small.py cascade_mask_rcnn_cbv2_swin_small.py
 ```
