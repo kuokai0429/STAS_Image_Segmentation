@@ -11,30 +11,30 @@ pytorch-21.06-py3:latest <br>
 ### Command: 
 
 ```
-git clone https://github.com/kuokai0429/STAS_Object_Detection.git
-cd STAS_Object_Detection
+git clone https://github.com/kuokai0429/STAS_Image_Segmentation.git
+cd STAS_Image_Segmentation
 
 pip3 install pipenv
 pipenv --python 3.8
 pipenv shell
 pipenv install --skip-lock
 
-git clone https://github.com/open-mmlab/mmdetection.git
-cd mmdetection
+git clone https://github.com/VDIGPKU/CBNetV2.git
+cd CBNetV2
 python setup.py develop
 
 cd ..
 sudo apt-get update
 sudo apt-get install ffmpeg libsm6 libxext6  -y
 
-wget --load-cookies /tmp/cookies.txt "https://docs.google.com/uc?export=download&confirm=$(wget --quiet --save-cookies /tmp/cookies.txt --keep-session-cookies --no-check-certificate 'https://docs.google.com/uc?export=download&id=1xBELX0HR1kkloxPZc-m_rjxWKAZNqITP' -O- | sed -rn 's/.*confirm=([0-9A-Za-z_]+).*/\1\n/p')&id=1xBELX0HR1kkloxPZc-m_rjxWKAZNqITP" -O STAS_OBJ_Data.zip && rm -rf /tmp/cookies.txt
+wget --load-cookies /tmp/cookies.txt "https://docs.google.com/uc?export=download&confirm=$(wget --quiet --save-cookies /tmp/cookies.txt --keep-session-cookies --no-check-certificate 'https://docs.google.com/uc?export=download&id=FILE_ID' -O- | sed -rn 's/.*confirm=([0-9A-Za-z_]+).*/\1\n/p')&id=FILE_ID" -O STAS_SEG_Data.zip && rm -rf /tmp/cookies.txt
 
 rm -r Configs Weights Datasets
-unzip STAS_OBJ_Data.zip
-mv STAS_OBJ_Data/Configs .
-mv STAS_OBJ_Data/Weights .
-mv STAS_OBJ_Data/Datasets .
-rmdir STAS_OBJ_Data
+unzip STAS_SEG_Data.zip
+mv STAS_SEG_Data/Configs .
+mv STAS_SEG_Data/Weights .
+mv STAS_SEG_Data/Datasets .
+rmdir STAS_SEG_Data
 
 python demo_coco.py --weight_file mask_rcnn_swin-s-p4-w7_fpn_fp16_ms-crop-3x_coco.pth
 python demo_stas_obj.py --weight_dir htc_swin_s_7_088_Weights --testdata_dirs Public_Image Private_Image/Image
