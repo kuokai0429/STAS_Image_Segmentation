@@ -1,0 +1,2 @@
+# STAS_Image_Segmentation
+ 肺腺癌病理切片影像之腫瘤氣道擴散偵測競賽 II：運用影像分割作法於切割STAS輪廓
