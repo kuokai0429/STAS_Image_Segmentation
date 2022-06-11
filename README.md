@@ -55,7 +55,7 @@ mv STAS_SEG_Data/Datasets .
 rmdir STAS_SEG_Data
 ```
 
-Step 6. Modify the version limitation in __init__.py
+Step 6. Modify the version limitation in ```__init__.py```
 ```
 sed -i "s/mmcv_maximum_version = '1.4.0'/mmcv_maximum_version = '1.5.2'/g" CBNetV2/mmdet/__init__.py
 ```
