@@ -25,7 +25,7 @@ pipenv shell
 pipenv install --skip-lock
 ```
 
-Step 2. Clone and Install MMDetection under current project folder.
+Step 2. Clone and Install CBNetV2 under current project folder.
 ```
 git clone https://github.com/VDIGPKU/CBNetV2.git
 cd CBNetV2
